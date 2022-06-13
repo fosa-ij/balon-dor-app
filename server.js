@@ -6,13 +6,14 @@ const app = express()
 const PORT = 8000
 const MongoClient = require('mongodb').MongoClient
 require('dotenv').config()
-const connectionString = process.env.DB_STRING
+// const connectionString = process.env.DB_STRING
+const connectionString = 'mongodb+srv://balon-dor-winners:iXQnGghfxCHbnDuz@cluster0.htmvum2.mongodb.net/?retryWrites=true&w=majority'
 
 // SERVER CREATION
 async function createServer(){
     try {
         // CONNECTION TO DATABASE
-        let client = await MongoClient.connect(connectionString, {useUnifiedTopology: true})
+        let client = await MongoClient.connect(connectionString)
         console.log('Connected to Database');
         const db = client.db('balon-dor-winners')
         const yearsCollection = db.collection('years')
