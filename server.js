@@ -12,7 +12,7 @@ const connectionString = process.env.DB_STRING
 async function createServer(){
     try {
         // CONNECTION TO DATABASE
-        let client = await MongoClient.connect(connectionString)
+        let client = await MongoClient.connect(connectionString, {useUnifiedTopology: true})
         console.log('Connected to Database');
         const db = client.db('balon-dor-winners')
         const yearsCollection = db.collection('years')
