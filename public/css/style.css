@@ -1,0 +1,19 @@
+.leftSection, .rightSection 
+    {
+        float: left;
+        width: 50%
+    }
+h1 
+    {
+        text-align: center;
+    }
+input
+    {
+        display: block;
+        margin-bottom: 40px;
+        width: 200px;
+    }
+#yearToDelete 
+    {
+        margin-bottom: 20px;
+    }

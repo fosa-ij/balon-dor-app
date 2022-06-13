@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balon D'or Winners</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>BALON D'OR WINNERS</h1>
+
+    <section class="leftSection">
+        <h2>Input API Data Here</h2>
+
+        <form action="/winners" method="post">
+            <input type="text" id="year" placeholder="YEAR" name="year">
+            <input type="text" id="name" placeholder="NAME" name="name">
+            <input type="text" id="goals" placeholder="GOALS"  name="goals">
+            <input type="text" id="assits" placeholder="ASSISTS" name="assists">
+            <input type="text" id="apps" placeholder="APPS" name="apps">
+            <input type="text" id="image" placeholder="IMAGE" name="image">
+            <input type="text" id="footBall_club" placeholder="FOOTBALL CLUB" name="football club">
+            <input type="text" id="nationality" placeholder="NATIONALITY" name="nationality">
+
+            <button id="submitNew" type="submit">SUBMIT NEW</button>
+            <button id="update">UPDATE EXISTING</button>
+        </form>
+        
+    </section>
+    <section class="rightSection">
+        <h2>Delete API Data Here</h2>
+        <input type="text" id="yearToDelete" placeholder="YEAR TO DELETE">
+        <button id="delete">DELETE</button>
+
+        <section id="winners">
+            <h2>PREVIOUS WINNERS</h2>
+
+            <ul>
+                <% for (i = 0; i < objects.length; i++) { %>
+                    <li>
+                        <span><%= objects[i].name %></span> in 
+                        <span><%= objects[i].year %></span>
+                    </li>
+                <% } %>
+            </ul>
+        </section>
+
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
