@@ -1,7 +1,16 @@
+body
+    {
+        color: whitesmoke;
+        background-color: rgba(0, 0, 0, 0.94);
+    }
+main 
+    {
+        display: flex;
+        justify-content: space-around;
+    }
 .leftSection, .rightSection 
     {
-        float: left;
-        width: 50%
+        /* width: 50% */
     }
 h1 
     {
@@ -16,4 +25,20 @@ input
 #yearToDelete 
     {
         margin-bottom: 20px;
+    }
+button
+    {
+        background-color: brown;
+        color: antiquewhite;
+        padding: 5px 10px;
+    }
+#submitNew 
+    {
+        background-color: green;
+        color: antiquewhite;
+    }
+#update 
+    {
+        background-color: rgb(16, 16, 180);
+        color: antiquewhite;
     }
